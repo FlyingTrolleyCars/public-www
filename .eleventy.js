@@ -20,7 +20,9 @@ module.exports = function(eleventyConfig) {
 
   // our plugins
   eleventyConfig.addPlugin(pluginImage);
-  
+
+  eleventyConfig.addPassthroughCopy("src/.well-known/*");
+
   /* Build the collection of posts to list in the site
      - Read the Next Steps post to learn how to extend this
   */
@@ -70,4 +72,3 @@ module.exports = function(eleventyConfig) {
     },
   };
 };
-
